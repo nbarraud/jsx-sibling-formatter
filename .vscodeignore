@@ -15,6 +15,7 @@ test-formatting-*
 .DS_Store
 **/.DS_Store
 node_modules/**
+!node_modules/typescript/**
 .git/**
 *.vsix
 package-lock.json 

@@ -3,8 +3,6 @@ import { formatJsxSiblings } from './jsxFormatter';
 
 export function activate(context: vscode.ExtensionContext): void
 {
-    console.log('JSX Sibling Formatter extension is now active!');
-
     const disposable = vscode.commands.registerCommand('jsx-sibling-formatter.formatSiblings', async (): Promise<void> =>
     {
         const editor = vscode.window.activeTextEditor;
