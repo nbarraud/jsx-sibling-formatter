@@ -2,7 +2,7 @@
     "name": "jsx-sibling-formatter",
     "displayName": "JSX Sibling Formatter",
     "description": "Adds empty lines between sibling JSX components for better readability",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "nicolas-barraud",
     "repository": {
         "type": "git",
