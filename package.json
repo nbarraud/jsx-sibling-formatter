@@ -1,0 +1,81 @@
+{
+    "name": "jsx-sibling-formatter",
+    "displayName": "JSX Sibling Formatter",
+    "description": "Adds empty lines between sibling JSX components for better readability",
+    "version": "1.0.0",
+    "publisher": "nicolas-barraud",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nbarraud/jsx-sibling-formatter"
+    },
+    "bugs": {
+        "url": "https://github.com/nbarraud/jsx-sibling-formatter/issues"
+    },
+    "homepage": "https://github.com/nbarraud/jsx-sibling-formatter#readme",
+    "keywords": [
+        "jsx",
+        "tsx",
+        "formatter",
+        "react",
+        "typescript",
+        "javascript",
+        "formatting",
+        "code-style",
+        "productivity"
+    ],
+    "engines": {
+        "vscode": "^1.74.0"
+    },
+    "categories": [
+        "Formatters"
+    ],
+    "main": "./out/src/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "jsx-sibling-formatter.formatSiblings",
+                "title": "Format JSX Siblings",
+                "category": "JSX Formatter"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "jsx-sibling-formatter.formatSiblings",
+                "key": "shift+alt+f",
+                "mac": "shift+alt+f",
+                "when": "editorTextFocus && (editorLangId == javascript || editorLangId == javascriptreact || editorLangId == typescript || editorLangId == typescriptreact)"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "jsx-sibling-formatter.formatSiblings",
+                    "when": "editorTextFocus && (editorLangId == javascript || editorLangId == javascriptreact || editorLangId == typescript || editorLangId == typescriptreact)",
+                    "group": "1_modification"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "jsx-sibling-formatter.formatSiblings"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "test": "npm run compile && node ./out/test/runTest.js",
+        "test-unit": "npm run compile && mocha --ui tdd ./out/test/unit/**/*.test.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.74.0",
+        "@types/node": "24.0.7",
+        "@types/mocha": "10.0.10",
+        "@vscode/test-electron": "2.5.2",
+        "mocha": "11.7.1",
+        "glob": "11.0.3",
+        "@types/glob": "8.1.0",
+        "typescript": "5.8.3"
+    }
+}
