@@ -110,6 +110,12 @@ MIT License
 
 ## 🚀 Release Notes
 
+### 1.0.1 - Project Cleanup
+- **🧹 Code Quality**: Removed debug `console.log` statements from production code.
+- **📦 Dependencies**: Moved TypeScript from `devDependencies` to `dependencies` to ensure proper runtime execution.
+- **⚙️ Configuration**: Cleaned up `.vscodeignore` and `tsconfig.json` to remove obsolete files and improve packaging.
+- **✨ General**: Staged project for a clean, production-ready release.
+
 ### 1.0.0
 - ✨ Initial release with core JSX sibling formatting functionality
 - 🎯 Smart AST-based JSX detection and processing
